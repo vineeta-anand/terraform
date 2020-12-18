@@ -19,5 +19,11 @@ pipeline{
 			cd ec2_instance_creation
 			terraform apply --auto-approve"""
 			}}
+            stage('terraform destroy'){
+			steps{
+			sh """
+			cd ec2_instance_creation
+			terraform destroy --auto-approve"""
+			}}
 			}
 		}
