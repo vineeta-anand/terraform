@@ -42,7 +42,7 @@ resource "aws_instance" "ec2-Instance-creation" {
     instance_type = var.instance_type
     key_name = var.key_name
     vpc_security_group_ids = [ aws_security_group.sg01.id ]
-    user_data = file("F:\\Terraform exercise\\module_folder\\user-data.txt")
+    user_data = file("/home/ubuntu/terraform/module_folder/user-data.txt")
     
     connection {
      type = "ssh"

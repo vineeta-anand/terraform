@@ -8,5 +8,5 @@ variable "key_name" {
 }
 
 variable "private_keypath" {
-  default = "C:\\Users\\vinni\\Downloads\\Cloudzenixkey.pem"
+  default = "/home/ubuntu/.passwd/Cloudzenixkey.pem"
 }
