@@ -48,11 +48,6 @@ resource "aws_instance" "name" {
      private_key = file(var.private_keypath)
          }
      
-    provisioner "file" {
-      content = "hello"
-      destination = "/home/ubuntu/v1.txt"
-    
-    }
 }
 
 
