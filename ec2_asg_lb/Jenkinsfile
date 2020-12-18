@@ -4,25 +4,25 @@ pipeline{
 			stage('terraform init'){
 			steps{
 			sh """
-			cd ec2_instance_creation
+			cd ec2_asg_lb
 			terraform init"""
 			}}
 			stage('terraform plan'){
 			steps{
 			sh """
-			cd ec2_instance_creation
+			cd ec2_asg_lb
 			terraform plan"""
 			}}
 			stage('terraform apply'){
 			steps{
 			sh """
-			cd ec2_instance_creation
+			cd ec2_asg_lb
 			terraform apply --auto-approve"""
 			}}
             stage('terraform destroy'){
 			steps{
 			sh """
-			cd ec2_instance_creation
+			cd ec2_asg_lb
 			terraform destroy --auto-approve"""
             echo "completed"
 			}}
