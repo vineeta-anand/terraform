@@ -1,0 +1,30 @@
+pipeline{
+    agent any
+		stages{
+			stage('terraform init'){
+			steps{
+			sh """
+			cd ec2_instance_creation
+			terraform init"""
+			}}
+			stage('terraform plan'){
+			steps{
+			sh """
+			cd ec2_instance_creation
+			terraform plan"""
+			}}
+			stage('terraform apply'){
+			steps{
+			sh """
+			cd ec2_instance_creation
+			terraform apply --auto-approve"""
+			}}
+            stage('terraform destroy'){
+			steps{
+			sh """
+			cd ec2_instance_creation
+			terraform destroy --auto-approve"""
+            echo "completed"
+			}}
+			}
+		}
