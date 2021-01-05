@@ -1,0 +1,2 @@
+################################################################
+This code creates ec2-ubuntu-instances, install nginx on instances, creates instances using auto scaling group and uses load balancing.
