@@ -1,0 +1,17 @@
+##############################################
+This code creates EC2-Ubuntu instances. After the creation of instance nginx is installed on those instances.
+
+Steps to run the code to create infrastructure:
+1. terraform init - It downloads the aws provider for Terraform.
+2. terraform plan - To preview the infrastructure being created.
+3. terraform apply - To create the infrastructure.
+
+
+########### To run code using Jenkins ###################
+
+Steps:
+1. Install Jenkins on the server.
+2. Install terraform plugin in Jenkins. ( Manage Jenkins > Manage Plugins > Available > Terraform )
+3. Configure Terraform in Global tool configuration.
+4. Create new Jenkins pipeline, use pipeline script using scm, provide git url and Jenkinsfile path.
+5. Trigger the build.
